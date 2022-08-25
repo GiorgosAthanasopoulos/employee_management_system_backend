@@ -48,7 +48,7 @@ public class EmployeeService {
     }
 
     @Transactional
-    public void putEmployee(long id, String name, String email, String jobPosition) {
+    public void putEmployee(long id, String name, String email, String jobPosition, String imgurl) {
         Optional<Employee> employeeOptional = employeeRepository.findById(id);
 
         if(employeeOptional.isEmpty()) {
@@ -67,6 +67,10 @@ public class EmployeeService {
 
         if(jobPosition != null && jobPosition.length() > 0 && !Objects.equals(jobPosition, employee.getJobPosition())) {
             employee.setJobPosition(jobPosition);
+        }
+
+        if(imgurl != null && imgurl.length() > 0 && !Objects.equals(imgurl, employee.getImgurl())) {
+            employee.setImgurl(imgurl);
         }
     }
 }

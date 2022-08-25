@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:3000/")
+@CrossOrigin(origins = "http://localhost:3000/")
 @RequestMapping(path = "api/v1/employee")
 public class EmployeeController {
     private final EmployeeService employeeService;
@@ -34,7 +34,7 @@ public class EmployeeController {
     }
 
     @PutMapping(path = "{id}")
-    public void putEmployee(@PathVariable long id, @RequestHeader String name, @RequestHeader String email, @RequestHeader String jobPosition) {
-        employeeService.putEmployee(id, name, email, jobPosition);
+    public void putEmployee(@PathVariable long id, @RequestHeader String name, @RequestHeader String email, @RequestHeader String jobPosition, @RequestHeader String imgurl) {
+        employeeService.putEmployee(id, name, email, jobPosition, imgurl);
     }
 }

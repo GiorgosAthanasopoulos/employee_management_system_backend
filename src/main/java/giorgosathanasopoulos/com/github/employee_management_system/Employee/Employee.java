@@ -23,9 +23,12 @@ public class Employee {
     @Setter
     @NonNull
     private String jobPosition;
+    @Setter
+    @NonNull
+    private String imgurl;
 
     @Override
     public String toString() {
-        return String.format("Employee: {\n\tId: %d,\n\tName: %s,\n\tEmail: %s,\n\tJob Position: %s\n}", id, name, email, jobPosition);
+        return String.format("Employee: {\n\tId: %d,\n\tName: %s,\n\tEmail: %s,\n\tJob Position: %s,\n\tImage URL: %s\n}", id, name, email, jobPosition, imgurl);
     }
 }
