@@ -1,6 +1,6 @@
 # employee_management_system
 An application to manage a team of employees. (reactjs+spring)
 
-Backend source code: https://www.github.com/giorgosathanasopoulos/employee_management_system_backend
+Backend source code: [Backend](https://www.github.com/giorgosathanasopoulos/employee_management_system_backend){:target="_blank"}
 
-Frontend source code: https://www.github.com/giorgosathanasopoulos/employee_management_system_frontend
+Frontend source code: [Frontend](https://www.github.com/giorgosathanasopoulos/employee_management_system_frontend){:target="_blank"}
