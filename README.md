@@ -1,2 +1,2 @@
 # employee_management_system_backend
-An application to manage a team of employees.(Backend made with spring+java)
+Backend for the employee_management_system application.(Backend made with spring+java)
