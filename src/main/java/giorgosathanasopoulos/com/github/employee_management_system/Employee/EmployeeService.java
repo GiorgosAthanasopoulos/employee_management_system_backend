@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,6 +20,11 @@ public class EmployeeService {
 
     public Optional<Employee> getEmployee(long id) {
         return employeeRepository.findById(id);
+    }
+
+    public List<Employee> filterEmployees(String filter) {
+        List<Employee> employeeList = employeeRepository.findAll();
+        return employeeList.stream().filter(employee -> employee.getName().toLowerCase().contains(filter)).toList();
     }
 
     public void postEmployee(Employee employee) {

@@ -23,6 +23,11 @@ public class EmployeeController {
         return employeeService.getEmployee(id);
     }
 
+    @GetMapping(path = "filter")
+    public List<Employee> filterEmployees(@RequestHeader String filter) {
+        return employeeService.filterEmployees(filter);
+    }
+
     @DeleteMapping(path = "{id}")
     public void deleteEmployee(@PathVariable long id) {
         employeeService.deleteEmployee(id);
